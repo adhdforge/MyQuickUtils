@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+// Disclaimer and Copyright Information
+// SvnPerms : 
+//
+// All rights reserved.
+//
+// Written by Riaan Lehmkuhl
+// Version 1.0
+//
+// Distribute freely, except: don't remove my name from the source or
+// documentation (don't take credit for my work), mark your changes (don't
+// get me blamed for your possible bugs), don't alter or remove this
+// notice.
+// No warrantee of any kind, express or implied, is included with this
+// software; use at your own risk, responsibility for damages (if any) to
+// anyone resulting from the use of this software rests entirely with the
+// user.
+//
+// Send bug reports, bug fixes, enhancements, requests, flames, etc. to
+// riaanl@gmail.com.com
+-->
+<svnperms>
+	<settings>
+		<setting name="SvnDir">C:\Program Files\VisualSVN Server\bin</setting>
+		<setting name="LogRegex">[a-zA-Z0-9]</setting>
+        <setting name="LogRegexMsg">You failed to supply a valid log message.</setting>
+        <setting name="ErrMsgSuffix">Please contact your SVN admin.</setting>
+	</settings>
+	<groups>
+		<developers>dev1,dev2,dev3</developers>
+	</groups>
+	<sections>
+		<default repos="repo1,repo2">
+			<location path="^\btrunk\b\/.*" actions="add,remove,update">@developers,dev4</location>
+			<location path="^\btags\b\/\w+\/" actions="add">@developers,dev4</location>
+			<location path="^\bbranches\b\/\w+\/" actions="add,remove,update">@developers,dev4,dev5</location>
+			<location path=".*" actions="add,remove,update">manager</location>
+		</default>
+		<repo4>
+			<location path=".*" actions="add,remove,update">*</location>
+		</repo4>
+	</sections>
+</svnperms>

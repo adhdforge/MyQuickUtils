@@ -1,0 +1,24 @@
+REM Disclaimer and Copyright Information
+REM SvnPerms : 
+REM
+REM All rights reserved.
+REM
+REM Written by Riaan Lehmkuhl
+REM Version 1.0
+REM
+REM Distribute freely, except: don't remove my name from the source or
+REM documentation (don't take credit for my work), mark your changes (don't
+REM get me blamed for your possible bugs), don't alter or remove this
+REM notice.
+REM No warrantee of any kind, express or implied, is included with this
+REM software; use at your own risk, responsibility for damages (if any) to
+REM anyone resulting from the use of this software rests entirely with the
+REM user.
+REM
+REM Send bug reports, bug fixes, enhancements, requests, flames, etc. to
+REM riaanl@gmail.com.com
+
+SET REPOS=%1
+SET REV=%2
+
+[drive]:\[path]\SvnPerms.exe %REV% %REPOS%
